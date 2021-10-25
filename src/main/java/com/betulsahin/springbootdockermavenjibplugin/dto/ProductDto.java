@@ -1,6 +1,7 @@
 package com.betulsahin.springbootdockermavenjibplugin.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.NumberFormat;
@@ -12,6 +13,7 @@ import java.util.Objects;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class ProductDto {
 
     @NumberFormat(style = NumberFormat.Style.NUMBER)

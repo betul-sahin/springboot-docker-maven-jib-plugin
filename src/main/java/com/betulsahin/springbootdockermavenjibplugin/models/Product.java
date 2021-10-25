@@ -2,6 +2,7 @@ package com.betulsahin.springbootdockermavenjibplugin.models;
 
 import com.betulsahin.springbootdockermavenjibplugin.models.abstractions.BaseEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 public class Product extends BaseEntity {
 
     private String name;
