@@ -23,7 +23,7 @@ public class ProductController {
     public ResponseEntity<Product> create(@Valid @RequestBody ProductDto request){
 
         Optional<Product> productOptional = productService.create(request);
-        if(productOptional.isPresent()){
+        if(!productOptional.isPresent()){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
