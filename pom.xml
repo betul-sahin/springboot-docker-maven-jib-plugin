@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>1.8</java.version>
         <app.image.name>spring-docker-demo</app.image.name>
-        <app.image.tag/>
+        <app.image.tag>v1</app.image.tag>
 	</properties>
 	<dependencies>
 		<dependency>
