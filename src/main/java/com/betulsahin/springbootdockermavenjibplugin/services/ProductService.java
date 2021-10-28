@@ -40,7 +40,6 @@ public class ProductService {
 
         for (Product product : products) {
             ProductDto productDto = ProductDto.builder()
-                    .id(product.getId())
                     .category(product.getCategory())
                     .name(product.getName())
                     .description(product.getDescription())
