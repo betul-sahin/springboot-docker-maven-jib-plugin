@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+  app:
+    image: betulsahinn/spring-docker-demo
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresqldb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/demo_data
+      SPRING_DATASOURCE_USERNAME: "postgres"
+      SPRING_DATASOURCE_PASSWORD: "12345"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create
+
+  postgresqldb:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=12345
